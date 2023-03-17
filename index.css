@@ -193,7 +193,7 @@ header.shadow {
 }
 .skills-img img {
   width: 120%;
-  height: 120%;
+  height: auto;
   padding-left: 3rem;
   object-position: center;
 }
@@ -555,35 +555,32 @@ form textarea {
     }
   }
   
-
-   .branch-container {
+  .branch-container {
     position: relative;
-    width: 5%;
-    height: 5%;
-    display: inline-flex;
-    margin-top: 20%;
-    margin-left: 40%;
-    float: inline-end;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
   }
   
   .branch {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    object-position: 10%;
-    transform: translate(-50%, -50%);
+    max-width: 100%;
+    height: auto;
+    object-position: center;
     animation: float 5s ease-in-out infinite;
   }
   
   @keyframes float {
     0% {
-      transform: translate(-50%, -50%) translateY(0);
+      transform: translateY(0);
     }
     50% {
-      transform: translate(-50%, -50%) translateY(-30px);
+      transform: translateY(-30px);
     }
     100% {
-      transform: translate(-50%, -50%) translateY(0);
+      transform: translateY(0);
     }
   }
   
