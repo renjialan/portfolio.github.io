@@ -1,6 +1,8 @@
 
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -9,20 +11,23 @@
   text-decoration: none;
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 :root {
-  --main-color: #ffffff;
-  --bg-color: #fff6e3;
-  --text-color: #025a59;
-  --hover: hsl(152, 74%, 21%);
+  --main-color: #98a9ab;
+  --bg-color: #f4efef;
+  --text-color: #293030;
+  --second-text:#ffe521;
+  accent-color: hsl(4, 43%, 80%);
+  --shadow-color: hsl(0, 15%, 25%);
+  --hover: #949494;
  
-  --big-font: 3.2rem;
-  --medium-font: 1.8rem;
+  --big-font: 2rem;
+  --medium-font: 1rem;
   --p-font: 0.941rem;
 }
 section {
-  padding: 50px 10%;
+  padding: 50px 20%;
 }
 body.active {
   --text-color: #9fa200;
@@ -40,12 +45,12 @@ body {
   text-align: center;
 }
 .heading h2 {
-  font-size: 30px;
+  font-size: 15px;
 }
  
 .heading span {
   font-size: var(--p-font);
-  color: rgb(198, 212, 0);
+  color: var(--main-color);
 }
 header {
   position: fixed;
@@ -59,8 +64,8 @@ header {
   background: var(--bg-color);
   padding: 13px 10%;
   transition: 0.2s;
-  box-shadow: -3px -3px 7px #ffffff73,
-				2px 2px 5px rgb(198, 212, 0);
+  box-shadow: -3px -3px 7px var(--shadow-color),
+				2px 2px 5px var(--hover);
 }
 header.shadow {
   box-shadow: 0 0 4px rgb(14 55 54 / 15%);
@@ -68,7 +73,7 @@ header.shadow {
 .logo {
   font-size: 1.61rem;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: var(--text-color);
 }
 .navbar {
@@ -140,17 +145,17 @@ header.shadow {
 .social a:hover {
   color: var(--hover);
 }
-.btn {
+/* .btn {
   display: inline-block;
   background: var(--main-color);
-  color: #c8da00;
+  color: var(accent-color);
   padding: 0.7rem 1.3rem;
   border-radius: 0.5rem;
-  box-shadow: #02595a;
+  box-shadow: var(--shadow-color);
 }
 .btn:hover {
   background: var(--hover);
-}
+} */
  
 
 .about-container {
@@ -216,7 +221,7 @@ span {
   left: 0;
   width: 100%;
   height: 0.5rem;
-  background: hsla(182, 100%, 24%, 0.4);
+  background: var(--bg-color);
   border-radius: 0.5rem;
 }
 .percent-bar {
@@ -224,7 +229,7 @@ span {
   bottom: 0;
   left: 0;
   height: 0.5rem;
-  background: rgb(0, 125, 130);
+  background: var(--main-color);
   border-radius: 0.5rem;
 }
 .html-bar {
@@ -255,10 +260,10 @@ span {
   text-align: center;
   border-radius: 0.5rem;
   border-bottom: 2px solid var(--main-color);
-  box-shadow: 0 2px 7px rgb(14 55 54 / 15%);
+  box-shadow: 0 2px 7px var(--shadow-color);
 }
 .services-box:hover{
- background-color: #004440;
+ background-color: var(--hover);
 }
 
 .services-box h3 {
@@ -267,7 +272,7 @@ span {
   margin: 0.7rem 0 0.4rem;
 }
 .services-box:hover h3{
-  color: #ffffff;
+  color: var(text-color);
 }
 .services-box .bx {
   padding-top: 2rem;
@@ -275,7 +280,7 @@ span {
   color: var(--text-color);
 }
 .services-box:hover .bx{
-  color: #a6a600;
+  color: var(--text-color);
 }
 .services-box a {
   color: var(--text-color);
@@ -283,7 +288,7 @@ span {
   font-weight: 500;
 }
 .services-box:hover a{
-  color: #fff;
+  color: var(--hover);
 }
 .portfolio-content {
   display: grid;
@@ -302,7 +307,7 @@ span {
 .portfolio-img {
   overflow: hidden;
   border-radius: 0.5rem;
-  box-shadow: 0 1px 6px rgba(0, 87, 85, 0.15);
+  box-shadow: 0 1px 6px var(--shadow-color);
   
 }
 .portfolio-img img {
@@ -331,7 +336,7 @@ textarea {
   width: 100%;
   border: none;
   outline: none;
-  background: rgb(142, 184, 146);
+  background: var(--bg-color);
   margin-bottom: 1rem;
   color: var(--text-color);
 }
@@ -346,8 +351,8 @@ form textarea {
 .contact-button {
   width: 160px;
   cursor: pointer;
-  background: #fff;
-  color: #9fa200;
+  background: var(--bg-color);
+  color: var(accent-color);
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -360,20 +365,20 @@ form textarea {
   display: grid;
   place-items: center;
   padding: 20px;
-  background: #ebebeb;
-  color: #000;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 .footer h2 {
   font-size: 1.5rem;
   margin-bottom: 1.6rem;
 }
 .footer-social a i{
-  color: rgb(255, 255, 255);
+  color: var(accent-color);
   font-size: 25px;
   margin-left: 10px;
   text-align: center;
   line-height: 40px;
-  background-color: #fff;
+  background-color: var(--bg-color);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -382,10 +387,10 @@ form textarea {
   padding: 20px;
   background: var(--main-color);
   text-align: center;
-  color: #fff;
+  color: var(--bg-color);
 }
 .copyright a{
-  color: #f3c4b8;
+  color: var(--shadow-color);
 }
 /* Making Responsive */
 @media (max-width: 991px) {
@@ -568,11 +573,19 @@ form textarea {
   .branch {
     max-width: 100%;
     height: auto;
-    object-position: center;
-    animation: float 5s ease-in-out infinite;
+    object-fit: contain; /* Ensures the image fits within the container without stretching */
+    border-radius: 15%;
+    /* animation: float 5s infinite; */
   }
   
-  @keyframes float {
+  @media (max-width: 768px) {
+    .branch-container {
+      margin-top: 10vh; /* Adjust the margin-top value for mobile devices */
+    }
+  }
+  
+  
+  /* @keyframes float {
     0% {
       transform: translateY(0);
     }
@@ -582,6 +595,19 @@ form textarea {
     100% {
       transform: translateY(0);
     }
+  } */
+  
+  .bottom-header{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    z-index: 1;
   }
-  
-  
+
+  .sticky{
+    position: sticky;
+    top: 170px;
+  }
