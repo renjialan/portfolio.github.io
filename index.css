@@ -47,6 +47,11 @@ body {
 .heading h2 {
   font-size: 15px;
 }
+
+.heading h4{
+  text-align: center;
+  font-size: 15px;
+}
  
 .heading span {
   font-size: var(--p-font);
@@ -133,6 +138,46 @@ header.shadow {
   font-weight: 400;
   margin: 0.7rem 0 1rem;
 }
+
+.arrow-container {
+  position: relative;
+  margin-top: -5%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  animation: blink 1s infinite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes glowing {
+  0%, 100% {
+    box-shadow: 0 0 5px 5px rgba(245, 230, 230, 0.5); /* Glowing effect */
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+
+
 .social {
   display: flex;
   flex-direction: column;
@@ -610,4 +655,14 @@ form textarea {
   .sticky{
     position: sticky;
     top: 170px;
+  }
+
+  .Footer{
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    z-index: 1;
   }
